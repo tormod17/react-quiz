@@ -1,10 +1,21 @@
 var Hapi = require('hapi');
 var Inert= require('inert');
+
 var fs = require('fs');
 
 const server = new Hapi.Server();
 
+var serverOptions = {
+      port:(process.env.PORT || 8000),
+      host: host
+};
+
 server.connection({ port:4000});
+
+var host ='localhost';
+if(process.env.PORT) host = '0.0.0.0';
+
+
 
 server.register(Inert, (err) => {
 
@@ -27,7 +38,9 @@ server.route({
         reply.file('quiz.json');
 
     }
-})
+}),
+
+
 
 
 
