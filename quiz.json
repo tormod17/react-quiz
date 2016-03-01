@@ -1,0 +1,44 @@
+ [
+    {
+      "question": "Which company released React.js?",
+      "answers": [
+        {
+          "is_right": true,
+          "value": "Facebook"
+        },
+        {
+          "is_right": false,
+          "value": "Twitter"
+        },
+        {
+          "is_right":false,
+          "value":"Goolge"
+        },
+        {
+          "is_right":false,
+          "value":"Microsoft"
+        }
+      ]
+    },
+    {
+      "question": "Why do we use Babel in React?",
+      "answers": [
+        {
+          "is_right": false,
+          "value": "convert JSX"
+        },
+        {
+          "is_right": true,
+          "value": "convert ES6 script"
+        },
+        {
+          "is_right":false,
+          "value":"parse react library"
+        },
+        {
+          "is_right":false,
+          "value":"It's a framework"
+        }
+      ]
+    }
+  ]
