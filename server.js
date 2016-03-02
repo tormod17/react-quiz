@@ -5,7 +5,7 @@ var fs = require('fs');
 
 var server = new Hapi.Server();
 
-var port = 8000;
+var port = 8000 || process.env.PORT;
 
 console.log('PORT' ,port);
 
