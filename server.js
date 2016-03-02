@@ -55,7 +55,7 @@ server.register(Inert, function(err){
 
 
 
-      server.start((err) => {
+      server.start(function(err){
         if(err){
            throw err;
         }
