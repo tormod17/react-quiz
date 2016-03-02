@@ -17,8 +17,7 @@ var serverOptions = {
 
 server.connection(serverOptions);
 
-server.register(Inert, (err) => {
-
+server.register(require('inert'), (err) => {
 
 server.route({
       method:'GET',
