@@ -3,7 +3,7 @@ var Inert= require('inert');
 
 var fs = require('fs');
 
-const server = new Hapi.Server();
+var server = new Hapi.Server();
 
 
 
