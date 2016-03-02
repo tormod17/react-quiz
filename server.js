@@ -8,6 +8,7 @@ var server = new Hapi.Server();
 var port = 8000;
 
 console.log('PORT' ,port);
+
 var serverOptions = {
       port:port
      
