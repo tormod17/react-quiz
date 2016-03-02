@@ -20,17 +20,6 @@ server.connection(serverOptions);
 
 server.register(Inert, (err) => {
 
-
-server.route({
-      method:'GET',
-      path:'/favicon.ico',
-      handler: function(request,reply){
-        reply.file('index.html')  ;
-      
-      }
-}),
-
-
 server.route({
       method:'GET',
       path:'/{param*}',
