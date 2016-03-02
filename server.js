@@ -6,14 +6,13 @@ var fs = require('fs');
 const server = new Hapi.Server();
 
 
-var host ='localhost';
-if(process.env.PORT) host = '0.0.0.0';
 
-var port =process.env.PORT || 8000;
-console.log('PORT', host ,port);
+var port = 8000;
+
+console.log('PORT' ,port);
 var serverOptions = {
       port:port,
-      host: host
+     
 };
 
 server.connection(serverOptions);
