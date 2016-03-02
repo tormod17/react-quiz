@@ -17,49 +17,49 @@ var serverOptions = {
 
 server.connection(serverOptions);
 
-server.register(require('inert'), (err) => {
+server.register(Inert, function(err){
 
-server.route({
-      method:'GET',
-      path:'/',
-      handler: function(request, reply){
-            reply.file('public/index.html');
-      }
+      server.route({
+            method:'GET',
+            path:'/',
+            handler: function(request, reply){
+                  reply.file('public/index.html');
+            }
 
-}),
-
-
-server.route({
-      method:'GET',
-      path:'/scripts/main.js',
-      handler: function(request, reply){
-            reply.file('public/scripts/main.js');
-      }
-
-}),
+      }),
 
 
+      server.route({
+            method:'GET',
+            path:'/scripts/main.js',
+            handler: function(request, reply){
+                  reply.file('public/scripts/main.js');
+            }
 
-
-server.route({
-    method:'GET',
-    path:'/quiz.json',
-    handler: function(request, reply){
-
-        reply.file('quiz.json');
-
-    }
-}),
+      }),
 
 
 
 
+      server.route({
+          method:'GET',
+          path:'/quiz.json',
+          handler: function(request, reply){
 
-server.start((err) => {
-  if(err){
-     throw err;
-  }
-  console.log('Server is running at : ', server.info.uri);
-});
+              reply.file('quiz.json');
+
+          }
+      }),
+
+
+
+
+
+      server.start((err) => {
+        if(err){
+           throw err;
+        }
+        console.log('Server is running at : ', server.info.uri);
+      });
 
 });
